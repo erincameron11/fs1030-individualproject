@@ -1,0 +1,31 @@
+<%- include ('./partials/header.ejs') %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <br><br>
+        <h1 class="text-center">Add to Portfolio</h1>
+        <br><br><br><br>
+        <form class="add-portfolio-form" action="" method="post" enctype="multipart/form-data">
+            <p>Enter your project information below to add a new project item to your portfolio:</p><br>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="project" id="project" placeholder="Project Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" maxlength="150" name="description" id="description" placeholder="Description" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12">
+                    <label for="portfolio-img"><b>Project Image</b></label><br>
+                    <input type="file" name="image" id="project-img" class="" required>
+                </div>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-info float-right">Add Portfolio Item</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

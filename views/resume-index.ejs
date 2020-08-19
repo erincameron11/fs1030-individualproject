@@ -1,0 +1,38 @@
+<%- include ('./partials/header.ejs') -%>
+    <div class="table-wrapper">
+        <% if (resume.length > 0) {%>
+            <h1 class="text-center">Edit Resume</h1><br><br><br>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% resume.forEach((resume, index) => { %>
+                        <tr>
+                            <th scope="row"><%= resume.resume_id %></th>
+                            <td><img src="/assets/img/<%= resume.image %>" class="rounded-circle resume-img" alt=""></td>
+                            <td><%= resume.position %></td>
+                            <td><%= resume.company %></td>
+                            <td><%= resume.description %></td>
+                            <td>
+                                <a href="/editresume/<%= resume.resume_id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                <a href="/deleteresume/<%= resume.resume_id %>" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No resume items found. Go <a href="/addresume" >here</a> to add jobs.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>

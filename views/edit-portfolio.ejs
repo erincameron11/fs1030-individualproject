@@ -1,0 +1,29 @@
+<%- include ('./partials/header.ejs') -%>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (portfolio) { %>
+        <br><br>
+        <form class="add-portfolio-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="project">Project</label>
+                    <input type="text" class="form-control" name="project" id="project" value="<%= portfolio.project %>" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" name="description" id="description" value="<%= portfolio.description %>" required title="Edit Description">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success float-right">Update Portfolio</button>
+        </form>
+    <% } else { %>
+        <br><br><br><br>
+        <p class="text-center">Portfolio Item Not Found. Go <a href="/addportfolio">here</a> to add portfolio items.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>

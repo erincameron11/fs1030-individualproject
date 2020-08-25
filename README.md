@@ -30,6 +30,31 @@ NodeJS-ExpressJS-MYSQL stack
 - req-flash - sends flash messages
 - nodemon - watches for changes and automatically restarts the server
 
+## Prerequisites
+You need Node.js to install the various packages used in this application.
+
+- Install node package manager
+```
+npm install
+```
+
+- Install dependencies
+```
+npm install express express-fileupload body-parser mysql ejs req-flash --save
+```
+
+- Install nodemon
+```
+npm install nodemon -g
+```
+
+- Start the app with:
+```
+nodemon app.js
+```
+
+
+
 ## IFD, ER Diagrams & Abstract Code
 IFD in repo as PDF file under name "Information Flow Diagram"
 ER Diagram in repo as PDF file under name "Entity Relationship Diagram"

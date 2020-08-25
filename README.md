@@ -1,12 +1,24 @@
 # FS1030 Invididual Project
-NodeJS-ExpressJS-MYSQL stack
+This web application features a Resume and Portfolio hub for Admin users of Erin Cameron's professional website through which an Admin may:
+1. Login
+2. View Resume items
+3. Update Resume items
+4. Add Resume items
+5. Delete Resume items
+6. View Portfolio items
+7. Update Portfolio items
+8. Add Portfolio items
+9. Delete Portfolio items
 
+```
+NodeJS-ExpressJS-MYSQL stack
+```
 
 ## Tools Used
-- NodeJS
 - XAMPP 
 - DBeaver
 - EJS is used as a templating engine
+- MySQL
 - Visual Studio Code
 
 ## Modules Used
@@ -17,6 +29,11 @@ NodeJS-ExpressJS-MYSQL stack
 - ejs - templating engine to help render HTML on the UI end
 - req-flash - sends flash messages
 - nodemon - watches for changes and automatically restarts the server
+
+## IFD, ER Diagrams & Abstract Code
+IFD in repo as PDF file under name "Information Flow Diagram"
+ER Diagram in repo as PDF file under name "Entity Relationship Diagram"
+Abstract Code in repo as PDF file under "Abstract Code"
 
 ## Steps to Run Project
 - Open XAMPP and Start
